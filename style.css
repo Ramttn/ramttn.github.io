@@ -1,0 +1,542 @@
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: var(--sec-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    margin-left: 23px;
+}
+
+#theme-switch svg {
+    fill: var(--text-color);
+}
+
+#theme-switch .fa-sun {
+    display: none;
+}
+
+
+.darkmode #theme-switch .fa-moon {
+    display: none;
+}
+
+.darkmode #theme-switch .fa-sun {
+    display: block;
+}
+
+
+
+
+:root{
+    --base-color: white;
+    --text-color: black;
+    --sec-color: rgb(90, 90, 90);
+    --third-color: black;
+    --color: #ebebeb;
+
+}
+
+.darkmode{
+    --base-color: black;
+    --text-color: white;
+    --sec-color: rgb(231, 228, 214);
+    --third-color: white;
+    --color: #222222;
+}
+
+body{
+    background-color: var(--base-color);
+    color: var(--text-color);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    box-sizing: border-box;
+}
+
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/city.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+}
+
+.about-col-2{
+    font-size: 19px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    position: relative;
+}
+
+nav ul li a{
+    color:#000000;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: #2baed2;
+    position:absolute;
+    left: 0;
+    bottom:-6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;;
+}
+
+.header-text h1 span{
+    color:#4590b3;
+}
+
+
+/*---------------About-------------------*/
+
+#about{
+    padding: 80px 0;
+    color: var(--sec-color);
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+
+}
+
+.about-col-2{
+    flex-basis: 60%;
+
+}
+
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--third-color);
+
+}
+
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.tab-links::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: #2baed2;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+
+}
+
+.tab-links.active-link::after{
+    width:70%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: #2baed2;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+
+.tab-contents.active-tab{
+   display: block;
+}
+
+
+/*-------------Personal Projects------------*/
+#personalp{
+    padding: 50px 0;
+}
+
+.proj-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+}
+
+.proj {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.proj img {
+    width: 100%;
+    height: 100%; /* Ensure consistent height */
+    object-fit: cover; /* Maintain image aspect ratio */
+    border-radius: 10px;
+}
+
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #4590b3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.proj:hover .layer {
+    opacity: 1;
+}
+
+.layer h3 {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.layer p {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: #4590b3;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+}
+
+/*-------------Skills------------*/
+#skills1 {
+    padding: 130px 0;
+}
+
+.skills-title {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.ig{
+    
+    width: 300px;
+}
+
+.gg{
+   margin-left: 61px;
+    width: 200px;
+}
+
+.dg{
+   
+    width: 290px;
+}
+.skills-title > div {
+    background: var(--color);
+    padding: 45px;
+    width: 400px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 5px;
+    overflow: hidden; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+
+.skills-title div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.skills-title div h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.skills-title div:hover{
+    background:#57b7e4;
+    transform: translateY(-10px);
+}
+
+
+
+/*---------------Contact---------------*/
+#contact{
+    margin-top: 50px;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-Right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: #84cbec;
+    margin-right: 15px;
+    font-size: 25px;
+
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+
+
+}
+
+.social-icons a:hover{
+    color: #39cef3;
+    transform: translateY(-5px);
+
+}
+
+.btn.btn2 {
+    text-decoration: none;
+    background: #61cae4;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px; /* Add some spacing above the button */
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+.btn.btn2:hover {
+    background: #2baed2;
+    transform: translateY(-2px);
+}
+
+.contact.right{
+    width: 100%;
+
+}
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #f5f5f5;
+    padding:15px;
+    margin: 15px 0;
+    color: #070606;
+    font-size: 18px;
+    border-radius: 6px; 
+
+}
+
+form button {
+    background: #61cae4;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 6px; /* Optional: Rounds corners */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background: #2baed2;
+    transform: translateY(-2px); /* Adds a subtle hover animation */
+}
+
+#copy{
+    margin-top: 170px;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #7fd2e7;
+    font-weight: 300;
+    margin-top: 20px;
+
+}
+
+/*------------------------Css for small screen-----------------------*/
+nav .fas{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/city.jpg);
+        
+    }
+
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+
+    }
+
+    .header-text h1{
+        font-size: 30px;
+    }
+
+    nav .fas{
+       
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul{
+        background-color: #4590b3;
+        position: fixed;
+        top: 0;
+        right: -170px;
+        width: 170px;
+        height: 110vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+
+    }
+
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    sub-title{
+        font-size: 40px; 
+    }
+    
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+         margin-bottom: 30px;
+    }
+
+    .about-col-2{
+        font-size: 14px;
+    }
+
+    .sub-title {
+        word-break: keep-all;
+        font-size: 40px; /* Slightly reduced font size for mobile */
+    }   
+    .contact-right{
+        margin-top: 60px;
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}

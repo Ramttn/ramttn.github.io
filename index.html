@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html> 
+    <head> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+            <link rel="stylesheet" href="style.css"/>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> Home </title>
+            <script type="text/javascript" src="darkmode.js" defer></script>
+           
+
+    </head>
+
+    <body > 
+        <header>
+            <button id="theme-switch">
+                <i class="fa-regular fa-moon"></i>
+                <i class="fa-regular fa-sun"></i>
+             </button>
+           </header>
+
+
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/rtn.png" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#personalp">Projects</a></li>
+                        <li><a href="#skills1">Skills</a></li>
+                        <li><a href="#contact">Contact me</a></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <p>Computer Science Student</p>
+                    <h1>Hi, I'm <span>Ramtin Ghanevati</span></h1>
+                </div>
+            </div>
+        </div>
+
+<!--------------------------------About----------------------------------------------->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/ramttin.JPG">
+                    </div>
+                    <div class="about-col-2">
+                            <h1 class="sub-title">About Me</h1>
+                            <p>
+                                Hi, I’m Ramtin Ghanevati, a passionate programmer and a student of computer science, on a journey to turn my ideas into code that can create a big impact in the world. In my free time I love playing guitar, working out, and spending time with my friends and family. I've been playing guitar since middle school and it's one of my favorite things to do. I started my coding journey in 2022 with a quick intro to python, though only recently picking it up again this year with my first semester of college where I'm studying c++. 
+                                I have a good eye when it comes to design and I love to learn new things. 
+                            </p>
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills', event)"><b>Skills</b></p>
+                                <p class="tab-links" onclick="opentab('experience', event)"><b>Experience</b></p>
+                                <p class="tab-links" onclick="opentab('education', event)"><b>Education</b></p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Html & Css</span><br>Web Design</li>
+                                    <li><span>Javascript</span><br>Entry level understanding</li>
+                                    <li><span>C++</span><br></li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents " id="experience">
+                                <ul>
+                                    <li><span>C++</span><br>CS-1A</li>
+                                    <li><span>HTML , CSS, & Java Script</span><br>Designing Websites </li>
+                                    <li><span>In-n-Out</span><br>Worked for In-n-out for about a year.</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>High School</span><br>Trabuco Hills Highschool</li>
+                                </ul>
+                            </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!------------------Personal Projects------------------->
+            <div id="personalp">
+                <div class="container">
+                    <h1 class="sub-title">Personal Projects</h1>
+                    <div class="proj-list">
+                        <div class="proj">
+                            <img src="images/proj.jpg">
+                            <div class="layer">
+                                <h3>Calculator</h3>
+                                <p>Discription</p>
+                                <a href="#"><i class="fa-solid fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="proj">
+                            <img src="images/proj.jpg">
+                            <div class="layer">
+                                <h3>Meteronome</h3>
+                                <p>Discription</p>
+                                <a href="#"><i class="fa-solid fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="proj">
+                            <img src="images/proj.jpg">
+                            <div class="layer">
+                                <h3>To-do list</h3>
+                                <p>Discription</p>
+                                <a href="#"><i class="fa-solid fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           <!------------------Skills------------------->
+           <div id="skills1">
+                <div class="container">
+                     <h1 class="sub-title">Skills</h1>
+                      <div class="skills-title">
+                        <div>
+                            <b><img src="images/web.png" class="ig"></b>
+                            
+                           
+                        </div>
+                        <div>
+                            <img src="images/c.png" class="gg">
+                            
+                            
+                                
+                        </div>
+                        <div>
+                            <img src="images/git.png" class="dg">
+                            
+                           
+                        </div>
+                      </div>  
+                </div>
+            </div>
+
+            <!--------------------Contact---------------------------->
+           
+            <div id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="contact-left">
+                            <h1 class="sub-title">Contact&nbsp;Me</h1>
+                            <p><i class="fas fa-paper-plane"></i>ghanevatiramtin6@gmail.com</p>
+                            <p><i class="fas fa-phone-square-alt"></i>(949)-521-8020</p>
+                            <div class="social-icons">
+                                <a href="https://github.com/Ramttn"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                            <!-- Move the Resume button inside contact-left -->
+                            <a href="file:///C:/Users/ramti/Downloads/Resume.pdf" download class="btn btn2">Download Resume</a>
+                        </div>
+                        <div class="contact-right">
+                            <form action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="bc68397a-f45c-4e1a-b3c2-9f1e22a4169e">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                                <input type="email" name="email" placeholder="Your Email" required>
+                                <textarea name="message" placeholder="Your Message" required></textarea>
+                                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                                <button type="submit">Submit Form</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div id="copy">
+            <div class="copyright">
+                <p>Copyright © 2024 Ramtin Ghanevati</p>
+            </div>
+            </div>
+           
+          
+            <script src="main.js"></script> 
+    </body>
+
+
+
+
+
+
+</html>
+
